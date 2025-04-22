@@ -6,10 +6,13 @@
         <view class="item-info">
           <view class="item-header">
             <text class="item-name">{{item.name}}</text>
-            <text class="item-status">制作中</text>
+            <text class="item-status" wx:if="{{item.progress === 'ZZ'}}">待宣</text>
+            <text class="item-status" wx:elif="{{item.progress === 'BD'}}">部分定档</text>
+            <text class="item-status" wx:elif="{{item.progress === 'DD'}}">已定档</text>
+            <text class="item-status" wx:elif="{{item.progress === 'SS'}}">已上演</text>
           </view>
           <view class="item-details">
-            <text class="item-date" wx:if="{{item.showDate}}">预计首演：{{item.showDate}}</text>
+            <text class="item-date" wx:if="{{item.showDate}}">预计开演：{{item.showDate}}</text>
           </view>
           <text class="item-votes">票数：{{item.votes}}</text>
         </view>
