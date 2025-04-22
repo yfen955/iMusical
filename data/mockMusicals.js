@@ -2,37 +2,37 @@
 const mockMusicals = [
   {
     id: 1,
-    name: '音乐剧《罗密欧与朱丽叶》',
+    name: '中国《风声》',
     progress: 'ZZ',
-    showDate: '2024年12月',
+    expectedDate: '2025年10月',
     votes: Math.floor(Math.random() * 100)
   },
   {
     id: 2,
-    name: '音乐剧《悲惨世界》',
+    name: '德国《摇滚莫扎特》',
     progress: 'ZZ',
-    showDate: '2025年3月',
+    expectedDate: '2025年12月',
     votes: Math.floor(Math.random() * 100)
   },
   {
     id: 3,
-    name: '音乐剧《歌剧魅影》',
-    progress: 'ZZ',
-    showDate: '2025年6月',
+    name: '法国《摇滚红与黑》',
+    progress: 'BD', //部分已定档
+    expectedDate: '2025年10月',
     votes: Math.floor(Math.random() * 100)
   },
   {
     id: 4,
-    name: '音乐剧《猫》',
+    name: '英国《歌剧魅影》',
     progress: 'ZZ',
-    showDate: '2025年9月',
+    expectedDate: '2025年12月',
     votes: Math.floor(Math.random() * 100)
   },
   {
     id: 5,
-    name: '音乐剧《西区故事》',
+    name: '德国《伊丽莎白》',
     progress: 'ZZ',
-    showDate: '2025年12月',
+    expectedDate: '2025年12月',
     votes: Math.floor(Math.random() * 100)
   }
 ];

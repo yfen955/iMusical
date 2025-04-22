@@ -85,17 +85,21 @@ Page({
           id: index + 1
         }));
 
+        // 按照票数排序
+        const sortedItems = [...finalItems].sort((a, b) => b.votes - a.votes);
+
         this.setData({
-          voteItems: finalItems,
-          rankingList: [...finalItems].sort((a, b) => b.votes - a.votes)
+          voteItems: sortedItems,
+          rankingList: sortedItems
         });
       },
       fail: (error) => {
         console.error('获取音乐剧列表失败：', error);
         // API调用失败时只使用假数据
+        const sortedMockMusicals = [...mockMusicals].sort((a, b) => b.votes - a.votes);
         this.setData({
-          voteItems: mockMusicals,
-          rankingList: [...mockMusicals].sort((a, b) => b.votes - a.votes)
+          voteItems: sortedMockMusicals,
+          rankingList: sortedMockMusicals
         });
       }
     });
@@ -110,11 +114,14 @@ Page({
       return item;
     });
 
+    // 按照票数排序更新voteItems
+    const sortedVoteItems = [...voteItems].sort((a, b) => b.votes - a.votes);
+    
     // 更新排行榜
-    const rankingList = [...voteItems].sort((a, b) => b.votes - a.votes);
+    const rankingList = sortedVoteItems;
 
     this.setData({
-      voteItems,
+      voteItems: sortedVoteItems,
       rankingList
     });
 
