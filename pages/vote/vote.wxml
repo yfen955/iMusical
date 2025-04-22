@@ -1,0 +1,20 @@
+<navigation-bar title="投票" back="{{true}}" homeButton="{{true}}" color="black" background="#FFF"></navigation-bar>
+<view class="container">
+  <view class="vote-section">
+    <view class="vote-list">
+      <view class="vote-item" wx:for="{{voteItems}}" wx:key="id">
+        <view class="item-info">
+          <view class="item-header">
+            <text class="item-name">{{item.name}}</text>
+            <text class="item-status">制作中</text>
+          </view>
+          <view class="item-details">
+            <text class="item-date" wx:if="{{item.showDate}}">预计首演：{{item.showDate}}</text>
+          </view>
+          <text class="item-votes">票数：{{item.votes}}</text>
+        </view>
+        <button class="vote-btn" bindtap="handleVote" data-id="{{item.id}}">投票</button>
+      </view>
+    </view>
+  </view>
+</view> 

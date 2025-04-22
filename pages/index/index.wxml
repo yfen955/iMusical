@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<navigation-bar title="我推的音乐剧" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<view class="container">
+  <view class="menu-list">
+    <view class="menu-item" bindtap="goToVote">
+      <view class="menu-title">投票</view>
+      <view class="menu-desc">为你喜欢的音乐剧投票</view>
+    </view>
+    <view class="menu-item" bindtap="goToRanking">
+      <view class="menu-title">排行榜</view>
+      <view class="menu-desc">查看音乐剧投票排名</view>
+    </view>
+  </view>
+</view>
